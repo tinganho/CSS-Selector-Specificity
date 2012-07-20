@@ -60,12 +60,3 @@ var Specificity = (function() {
     return C;
     
 })();
-
-
-// Testing
-
-// var element = document.createElement('div');
-// element.className = 'hello juoo';
-// element.setAttribute('href', 'hej');
-
-// document.write(JSON.stringify(Specificity.getSpecificity("html, body, div.hello.juoo[href=hej]", element)));​
