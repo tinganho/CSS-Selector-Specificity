@@ -26,7 +26,7 @@ var Specificity = (function() {
             if (a[2] > b[2]) return -1;
             if (a[2] < b[2]) return 1;
             else return 0;
-        })
+        });
 
         return points;
     }
