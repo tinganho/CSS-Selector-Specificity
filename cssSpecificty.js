@@ -63,9 +63,6 @@ var Specificity = (function() {
 })();
 
 
-
-
-
 // Testing
 
 // var element = document.createElement('div');
