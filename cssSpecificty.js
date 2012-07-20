@@ -46,15 +46,15 @@ var Specificity = (function() {
 
             var numClasses = numMatches(splittedSelector[i], /\.[\w-_]+\b/g);
             var numIds = numMatches(splittedSelector[i], /#[\w-_]+\b/g);
-            var numNamesInBraces = 0;
-            var namesInBraces = splittedSelector[i].match(/\[[^\]]*\b[\w-_]+\b[^\]]*\]/g) || [];
-            for (var idx = 0; idx < namesInBraces.length; ++idx) {
-                numNamesInBraces += (namesInBraces[idx].match(/\b[\w-_]+\b/g) || []).length;
+            var numAttributes = 0;
+            var attributes = splittedSelector[i].match(/\[[^\]]*\b[\w-_]+\b[^\]]*\]/g) || [];
+            for (var idx = 0; idx < attributes.length; ++idx) {
+                numAttributes += (attributes[idx].match(/\b[\w-_]+\b/g) || []).length;
             }
             var results = [0, 0, 0];
             results[0] = numIds;
             results[1] = numMatches(splittedSelector[i], /\[[^\]]+\]/g) + numClasses;
-            results[2] = numMatches(splittedSelector[i], /\b[\w-_]+\b/g) - numIds - numClasses - numNamesInBraces;
+            results[2] = numMatches(splittedSelector[i], /\b[\w-_]+\b/g) - numIds - numClasses - numAttributes;
             points.push(results);
         }
 
