@@ -1,8 +1,6 @@
 var Specificity = (function() {
 
-
     var C = {};
-
 
     function numMatches(selector, regex) {
         return (selector.match(regex) || []).length;
@@ -60,6 +58,7 @@ var Specificity = (function() {
     }
 
     return C;
+    
 })();
 
 
