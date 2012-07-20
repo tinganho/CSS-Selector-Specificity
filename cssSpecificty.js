@@ -40,8 +40,6 @@ var Specificity = (function() {
 
         for (var i in splittedSelector) if (splittedSelector.hasOwnProperty(i)) {
 
-
-
             if (!is(splittedSelector[i], element)) continue;
 
             var numClasses = numMatches(splittedSelector[i], /\.[\w-_]+\b/g);
